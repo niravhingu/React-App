@@ -17,14 +17,20 @@ export function ComponentA(){
 
 
 function App() {
-  const [counter, setCounter] = useState(0);  
+  const [counter, setCounter] = useState(0); 
+  const [name, setName] = useState(0);   
 
 
 // let counter= 5
 const addvalue=()=>{
-console.log("add value",counter)
   setCounter(counter+1)
+  console.log("add value",counter)
 }
+
+const removevalue=()=>{
+  setName(name-1)
+  console.log("remove value",name)
+  }
   return (
     <>
     <h1>Counter App</h1>
@@ -33,7 +39,9 @@ console.log("add value",counter)
     onClick={addvalue}
     >Add value: {counter}</button>
     <br></br>
-    <button>remove Button: {counter}</button>
+    <button
+    onClick={removevalue}
+    >remove Button: {name}</button>
     <p>Footer : {counter}</p>
     <ComponentA/>
     <ComponentB/>
