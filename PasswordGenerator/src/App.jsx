@@ -32,12 +32,12 @@ function App() {
   }, [password]) 
   return (
     <>
-    <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-8 text-orange-500 bg-gray-800 '>
+    <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 my-50 text-black-500 bg-white'>
      <h1 className='text-white text-center my-3'>Password Generator</h1>
-      <div className='flex shadow rounded-lg overflow-hidden mb-4'> 
+      <div className='flex shadow rounded-lg overflow-hidden mb-2'> 
       <input type="text" 
       value={password}
-      className='outline-none w-full px-2 py-3 mb-3 text-white bg-red-400'
+      className='outline-none w-full px-2 py-3 mb-3 text-white bg-black'
       placeholder='Your Password' readOnly
       ref={passwordref}
       />
@@ -46,7 +46,7 @@ function App() {
       className='outline-none bg-orange-500 text-white px-4 py-3 mb-3 cursor-pointer ' >Copy</button>
        </div>
        <div className='flex text-sm gap-x-2'>
-        <div className='flex items-center gap-x-1'>
+        <div className='flex items-center gap-x-1 mb-6'>
           <input type="Range"
           min={8}
           max={20}
@@ -56,7 +56,7 @@ function App() {
           />
           <label>length : {length}</label>
         </div>
-        <div className='flex items-center gap-x-'>
+        <div className='flex items-center gap-x-1 mb-6'>
           <input type="checkbox"
           defaultChecked={numbersallowed}
           id='Numberinput'
@@ -67,7 +67,7 @@ function App() {
           <label htmlFor='Numberinput'>Numbers</label>
 
 </div>
-   <div className='flex items-center gap-x-1'>
+   <div className='flex items-center gap-x-1 mb-6'>
           <input type="checkbox"
           defaultChecked={charallowed}
           id='charinput'
