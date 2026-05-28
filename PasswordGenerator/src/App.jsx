@@ -2,6 +2,7 @@ import { useState , useCallback, useEffect, useRef} from 'react'
 import './index.css'
 
 function App() {
+
   const [length, setLength] = useState(8)
   const [numbersallowed, setNumbersAllowed] = useState(false)
   const [charallowed, setCharAllowed] = useState(false)
@@ -23,7 +24,7 @@ function App() {
 
   }, [length, numbersallowed, charallowed, setPassword])
 
-  useEffect(() => {passwordGenerator()}, [length,numbersallowed,charallowed, passwordGenerator])
+  useEffect(() => {passwordGenerator()}, [length , numbersallowed , charallowed])
 
   const copypasswordtoclipboard = useCallback(() => {
     passwordref.current.select()
